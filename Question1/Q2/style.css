@@ -1,0 +1,34 @@
+.container {
+  font-size: 14px;
+}
+.container .header {
+  font-size: 18px;
+}
+.container .shop-list {
+  list-style: none;
+  margin-left: -15px;
+}
+.container .shop-list li.item {
+  color: green;
+}
+/* Explain why does this color not works, and how to fix make it work on 
+1st list:
+
+This won't work because of a specific CSS selector was defined earlier ( li.item )
+.container .shop-list .item {
+  color: blue; 
+}
+*/
+
+/* To fix it, it should identify targets li items in ol */
+.container ol.shop-list li.item {
+  color: blue; /* This will now override the green for ordered list items */
+}
+
+/* Write styling make every other line give background color to next one */
+.container .shop-list li.item:nth-child(odd) {
+  background-color: #f2f2f2; /* Light grey background for odd items */
+}
+.container .shop-list li.item:nth-child(even) {
+  background-color: #e6e6e6; /* Slightly darker grey for even items */
+}
