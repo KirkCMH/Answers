@@ -1,0 +1,77 @@
+:root {
+  --color-select: #006edc;
+  --color-hover: #e0e0e0;
+  --color-disabled: #757575;
+  --color-today: #ffff76;
+}
+
+.datepicker {
+  width: 350px;
+  height: 240px;
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+}
+
+.datepicker-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 350px;
+  height: 44px;
+  margin-bottom: 16px;
+}
+
+.datepicker-header button {
+  width: 44px;
+  height: 44px;
+  background-color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.datepicker-header button:hover {
+  background-color: var(--color-hover);
+}
+
+.datepicker-grid {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+}
+
+.datepicker-day-header,
+.datepicker-day {
+  text-align: center;
+  cursor: pointer;
+}
+
+.datepicker-day-header {
+  font-weight: bold;
+}
+
+.datepicker-day {
+  width: 50px;
+  height: 36px;
+  align-content: center;
+  border-radius: 4px;
+}
+
+.datepicker-day.today {
+  background-color: var(--color-today);
+}
+
+.datepicker-day.selected {
+  background-color: var(--color-select);
+  color: #fff;
+}
+
+.datepicker-day:hover {
+  background-color: var(--color-hover);
+}
+
+.datepicker-day.non-current-month {
+  color: var(--color-disabled);
+  cursor: not-allowed;
+}
+.datepicker-day.non-current-month:hover {
+  background-color: transparent;
+}
